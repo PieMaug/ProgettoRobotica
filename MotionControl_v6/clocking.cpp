@@ -2,10 +2,9 @@
  * clocking.c
  */
 
-#include <p33FJ128MC802.h>
 
 #include "defines.h"
-#include "clocking.h"
+
 
 #ifdef EXTERNAL_CLOCK
 

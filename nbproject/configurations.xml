@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="libs" displayName="libs" projectFiles="true">
+        <logicalFolder name="controllib" displayName="controllib" projectFiles="true">
+          <itemPath>libs/controllib/chebyshev.cpp</itemPath>
+          <itemPath>libs/controllib/chebyshev.h</itemPath>
+          <itemPath>libs/controllib/controllib.mk</itemPath>
+          <itemPath>libs/controllib/filter.h</itemPath>
+          <itemPath>libs/controllib/fsm.h</itemPath>
+          <itemPath>libs/controllib/low_pass.cpp</itemPath>
+          <itemPath>libs/controllib/low_pass.h</itemPath>
+          <itemPath>libs/controllib/periodic_task.cpp</itemPath>
+          <itemPath>libs/controllib/periodic_task.h</itemPath>
+          <itemPath>libs/controllib/pid.cpp</itemPath>
+          <itemPath>libs/controllib/pid.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="timer" displayName="timer" projectFiles="true">
+          <itemPath>libs/timer/SoftTimer.cpp</itemPath>
+          <itemPath>libs/timer/SoftTimer.h</itemPath>
+          <itemPath>libs/timer/main.cpp</itemPath>
+          <itemPath>libs/timer/prova.txt</itemPath>
+          <itemPath>libs/timer/timer_prova</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="MotionControl_v6"
+                     displayName="MotionControl_v6"
+                     projectFiles="true">
+        <itemPath>MotionControl_v6/.Makefile.swp</itemPath>
+        <itemPath>MotionControl_v6/Makefile</itemPath>
+        <itemPath>MotionControl_v6/Makefile.old</itemPath>
+        <itemPath>MotionControl_v6/absolute_rotation.cpp</itemPath>
+        <itemPath>MotionControl_v6/absolute_rotation.h</itemPath>
+        <itemPath>MotionControl_v6/can_interface.cpp</itemPath>
+        <itemPath>MotionControl_v6/can_interface.h</itemPath>
+        <itemPath>MotionControl_v6/circ_rotation.cpp</itemPath>
+        <itemPath>MotionControl_v6/circ_rotation.h</itemPath>
+        <itemPath>MotionControl_v6/clocking.cpp</itemPath>
+        <itemPath>MotionControl_v6/clocking.h</itemPath>
+        <itemPath>MotionControl_v6/defines.h</itemPath>
+        <itemPath>MotionControl_v6/follow_line.cpp</itemPath>
+        <itemPath>MotionControl_v6/follow_line.h</itemPath>
+        <itemPath>MotionControl_v6/geometry.cpp</itemPath>
+        <itemPath>MotionControl_v6/geometry.h</itemPath>
+        <itemPath>MotionControl_v6/goto_point.cpp</itemPath>
+        <itemPath>MotionControl_v6/goto_point.cpp.bak</itemPath>
+        <itemPath>MotionControl_v6/goto_point.h</itemPath>
+        <itemPath>MotionControl_v6/goto_point.h.bak</itemPath>
+        <itemPath>MotionControl_v6/gpio.h</itemPath>
+        <itemPath>MotionControl_v6/kinematics.cpp</itemPath>
+        <itemPath>MotionControl_v6/kinematics.h</itemPath>
+        <itemPath>MotionControl_v6/main</itemPath>
+        <itemPath>MotionControl_v6/main.cpp</itemPath>
+        <itemPath>MotionControl_v6/path_control.cpp</itemPath>
+        <itemPath>MotionControl_v6/path_control.h</itemPath>
+        <itemPath>MotionControl_v6/position_control.h</itemPath>
+        <itemPath>MotionControl_v6/pwm.cpp</itemPath>
+        <itemPath>MotionControl_v6/pwm.h</itemPath>
+        <itemPath>MotionControl_v6/qei.cpp</itemPath>
+        <itemPath>MotionControl_v6/qei.h</itemPath>
+        <itemPath>MotionControl_v6/relative_rotation.cpp</itemPath>
+        <itemPath>MotionControl_v6/relative_rotation.h</itemPath>
+        <itemPath>MotionControl_v6/simulator_interface.h</itemPath>
+        <itemPath>MotionControl_v6/speed_control.cpp</itemPath>
+        <itemPath>MotionControl_v6/speed_control.h</itemPath>
+        <itemPath>MotionControl_v6/time_defines.h</itemPath>
+        <itemPath>MotionControl_v6/timers.cpp</itemPath>
+        <itemPath>MotionControl_v6/timers.h</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>MotionControl_v6</Elem>
+    <Elem>libs</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="MotionControl_v6/.Makefile.swp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/Makefile.old" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/absolute_rotation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/absolute_rotation.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/can_interface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/can_interface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/circ_rotation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/circ_rotation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/clocking.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/clocking.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/defines.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/follow_line.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/follow_line.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/geometry.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/geometry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.cpp.bak"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.h.bak" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/gpio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/kinematics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/kinematics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/main" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/path_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/path_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/position_control.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/pwm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/pwm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/qei.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/qei.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/relative_rotation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/relative_rotation.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/simulator_interface.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/speed_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/speed_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/time_defines.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/timers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/timers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/chebyshev.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/chebyshev.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/controllib.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/filter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/fsm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/low_pass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/low_pass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/periodic_task.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/periodic_task.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/pid.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/pid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/timer/SoftTimer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/timer/SoftTimer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/timer/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/timer/prova.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/timer/timer_prova" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="MotionControl_v6/.Makefile.swp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/Makefile" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/Makefile.old" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/absolute_rotation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/absolute_rotation.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/can_interface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/can_interface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/circ_rotation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/circ_rotation.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/clocking.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/clocking.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/defines.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/follow_line.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/follow_line.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/geometry.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/geometry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.cpp.bak"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/goto_point.h.bak" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/gpio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/kinematics.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/kinematics.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/main" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/path_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/path_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/position_control.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/pwm.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/pwm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/qei.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/qei.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/relative_rotation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/relative_rotation.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/simulator_interface.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="MotionControl_v6/speed_control.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/speed_control.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/time_defines.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/timers.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MotionControl_v6/timers.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/chebyshev.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/chebyshev.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/controllib.mk" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/filter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/fsm.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/low_pass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/low_pass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/periodic_task.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/periodic_task.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/controllib/pid.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/controllib/pid.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/timer/SoftTimer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/timer/SoftTimer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/timer/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="libs/timer/prova.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="libs/timer/timer_prova" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

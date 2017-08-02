@@ -6,7 +6,7 @@
 
 #include "defines.h"
 
-#include <p33FJ128MC802.h>
+
 
 
 /* inizializzazione timer2 per il controllo in velocita' e posizione */

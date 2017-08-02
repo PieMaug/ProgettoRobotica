@@ -6,9 +6,6 @@
 #define __SIMULATOR_INTERFACE
 
 #include "defines.h"
-#include <xc.h>
-#include <libpic30.h>
-
 #include <stdbool.h>
 
 #define in_simulator() ((bool)((CORCON & 0x8000) != 0)) // restituisce true nel simulatore, false nella realtà
