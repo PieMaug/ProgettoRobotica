@@ -2,7 +2,7 @@
  * main.cpp
  */
 
-#include "defines.h"
+
 
 //#include <p33FJ128MC802.h>
 #include "SoftTimer.h"
