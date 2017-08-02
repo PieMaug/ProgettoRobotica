@@ -3,7 +3,6 @@
  */
 
 #include "kinematics.h"
-#include "qei.h"
 #include <math.h>
 
 Kinematics::Kinematics(Pose & p, float radius_left, float radius_right, float wheel_base, float ticks)

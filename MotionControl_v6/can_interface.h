@@ -6,8 +6,8 @@
 #define __CAN_INTERFACE_H
 
 #include "defines.h"
-#include <p33FJ128MC802.h>
-#include <libpic30++.h>
+
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
