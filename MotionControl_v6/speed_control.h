@@ -9,7 +9,10 @@
 #include "pid.h"
 #include "periodic_task.h"
 #include "kinematics.h"
-#include "pwm.h"
+//#include "pwm.h"
+#define MAX_PWM 100
+
+void set_pwm(int,int);
 
 class SpeedControlTask : public PeriodicTask {
  public:

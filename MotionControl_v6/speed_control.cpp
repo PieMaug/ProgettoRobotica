@@ -5,6 +5,11 @@
 #include "speed_control.h"
 #include "time_defines.h"
 
+void set_pwm(int,int){
+    return;
+}
+
+
 SpeedControlTask::SpeedControlTask(Kinematics & kin)
     : PeriodicTask("speed_control", SPEED_PERIOD, TIME_UNIT, SPEED_JITTER),
       m_kinematics(kin),

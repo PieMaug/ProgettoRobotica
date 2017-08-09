@@ -5,6 +5,13 @@
 #include "kinematics.h"
 #include <math.h>
 
+int qei_position_1(){
+    return 1;
+}
+int qei_position_2(){
+    return 2;
+}
+
 Kinematics::Kinematics(Pose & p, float radius_left, float radius_right, float wheel_base, float ticks)
     : PeriodicTask("kinematics", KINEMATICS_PERIOD, TIME_UNIT, KINEMATICS_JITTER), m_ticks_per_revolution(ticks), robot_pose(p)
 {

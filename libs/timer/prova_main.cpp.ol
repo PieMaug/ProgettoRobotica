@@ -28,6 +28,7 @@ void f(){
 	printf("seconds->%d\n",timeinfo->tm_sec);
 }
 
+#if 0
 int main(){
 #if 0
 	signal(SIGALRM,tapposto);
@@ -44,3 +45,4 @@ int main(){
 	}
 	return 0;
 }
+#endif

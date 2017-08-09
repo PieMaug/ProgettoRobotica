@@ -9,12 +9,12 @@
 #include "geometry.h"
 #include "kinematics.h"
 #include "speed_control.h"
-#include "can_interface.h"
-#include "clocking.h"
-#include "qei.h"
-#include "pwm.h"
-#include "timers.h"
-#include "gpio.h"
+//#include "can_interface.h"
+//#include "clocking.h"
+//#include "qei.h"
+//#include "pwm.h"
+//#include "timers.h"
+//#include "gpio.h"
 #include "relative_rotation.h"
 #include "absolute_rotation.h"
 #include "circ_rotation.h"
@@ -22,6 +22,9 @@
 #include "follow_line.h"
 #include "goto_point.h"
 
+#include <stdio.h>
+
+#if 0
 void initialize_peripherals()
 {
     init_clock();
@@ -53,7 +56,7 @@ void flash_at_boot()
         led_off();
     }
 }
-
+#endif
 
 Pose current_robot_pose;
 Kinematics kinematics(current_robot_pose, 27, 27, 303, 4000); // initial values, wheels diameter, interasse, tick
@@ -73,7 +76,7 @@ bool TIF = 0;
 void timer_func(){
 	TIF = 1;
 }
-SoftTimer* timer = get_timer(5,timer_func);
+SoftTimer* timer = SoftTimer::get_timer(5,timer_func);
 
 int main()
 {
@@ -84,7 +87,7 @@ int main()
     //can_pose_sender.on();
     path_control.on();
 
-    timer.start();
+    timer->start();
     for (;;) {
 
         //can_receiver.run();

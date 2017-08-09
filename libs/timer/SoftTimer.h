@@ -6,7 +6,7 @@
 
 typedef void(*Func)(void);
 class SoftTimer;
-static SoftTimer* timer = NULL;
+static SoftTimer* singleton_timer = NULL;
 
 static void sing_handler(int);
 
@@ -28,9 +28,9 @@ class SoftTimer{
 
 
 static void sing_handler(int){
-	if(timer != NULL){
-		(timer->get_func())();
-		alarm(timer->get_time());
+	if(singleton_timer != NULL){
+		(singleton_timer->get_func())();
+		alarm(singleton_timer->get_time());
 	}
 }
 

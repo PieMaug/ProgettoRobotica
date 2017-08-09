@@ -9,6 +9,9 @@
 #include "geometry.h"
 #include "time_defines.h"
 
+int qei_position_1();
+int qei_position_2();
+
 class Kinematics : public PeriodicTask {
  public:
     Kinematics(Pose & p, float radius_left, float radius_right, float wheel_base, float ticks);

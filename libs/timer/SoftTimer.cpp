@@ -8,10 +8,10 @@ SoftTimer::SoftTimer(int t, Func f){
 
 
 SoftTimer* SoftTimer::get_timer(int t, Func f){
-	if(timer == NULL){
-		timer = new SoftTimer(t,f);
+	if(singleton_timer == NULL){
+		singleton_timer = new SoftTimer(t,f);
 	}
-	return timer;
+	return singleton_timer;
 }
 
 void SoftTimer::set_time(int t){
