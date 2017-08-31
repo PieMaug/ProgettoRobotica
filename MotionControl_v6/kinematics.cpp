@@ -5,12 +5,6 @@
 #include "kinematics.h"
 #include <math.h>
 
-int qei_position_1(){
-    return 1;
-}
-int qei_position_2(){
-    return 2;
-}
 
 Kinematics::Kinematics(Pose & p, float radius_left, float radius_right, float wheel_base, float ticks)
     : PeriodicTask("kinematics", KINEMATICS_PERIOD, TIME_UNIT, KINEMATICS_JITTER), m_ticks_per_revolution(ticks), robot_pose(p)
@@ -34,11 +28,20 @@ void Kinematics::set_radius_right(float radius_right)
     m_wheel_factor_right = TWO_PI * m_radius_right / m_ticks_per_revolution;
 }
 
+
+#if 1
 void Kinematics::run()
 {
-    int poscount_L = qei_position_1(); //POS1CNT;
-    int poscount_R = qei_position_2(); //POS2CNT;
-
+#if 0
+    int poscount_L = qei_position_1(telem); //POS1CNT;
+    int poscount_R = qei_position_2(telem); //POS2CNT;
+	printf("left %d, right %d\n",poscount_L, poscount_R);
+#else
+	int poscount_L, poscount_R;
+	float ts, vel_l, vel_r;
+	telem->get_sample(&ts,&poscount_L,&poscount_R,&vel_l,&vel_r);
+	telem->print();
+#endif
     int delta_tick_L = -(poscount_L - m_poscount_left); // il segno meno e' necessario perche' le due ruote sono contrapposte
     int delta_tick_R = poscount_R - m_poscount_right;
 
@@ -48,8 +51,8 @@ void Kinematics::run()
     float f_delta_tick_L = delta_tick_L * m_wheel_factor_left;
     float f_delta_tick_R = delta_tick_R * m_wheel_factor_right;
 
-    m_speed_left = f_delta_tick_L / m_real_time_period;
-    m_speed_right = f_delta_tick_R / m_real_time_period;
+    m_speed_left = telem->get_left_vel();//f_delta_tick_L / m_real_time_period;
+    m_speed_right = telem->get_right_vel();//f_delta_tick_R / m_real_time_period;
 
     m_linear_speed  = ( m_speed_left + m_speed_right ) / 2.0 ;
     // velocità del punto medio nel caso di moto lineare in mm/s
@@ -85,4 +88,19 @@ void Kinematics::run()
         m_rotation_radius_infinity = false;
         m_rotation_radius = (m_wheelbase / 2.0) * (m_speed_right + m_speed_left) / (m_speed_right - m_speed_left);
     }
+}
+#else
+	void Kinematics::run(){
+		m_speed_left = telem->get_left_vel();
+		m_speed_right = telem->get_right_vel();
+		//linear speed
+		m_linear_speed = (m_speed_right + m_speed_left)/2.0;
+		//angular speed
+		m_angular_speed = (m_speed_right - m_speed_left)/m_wheelbase;
+		
+	}
+#endif
+
+void Kinematics::set_telem(TelemInterface* _tel){
+	this->telem = _tel;
 }

@@ -62,7 +62,7 @@ float normalize_angle(float a)
     return a;
 }
 
-float hypot(float a, float b)
+float hypote(float a, float b)
 {
     return sqrt(a*a + b*b);
 }

@@ -46,7 +46,7 @@ void * timer_func(void* arg){
 		actual = high_resolution_clock::now();
 		duration<double>diff = actual - start;
 		if( 1000 * diff.count() >= timer->getTime()){
-			timer->set();
+            timer->set();
 			start = actual;
 		}
 	}

@@ -8,9 +8,7 @@
 #include "periodic_task.h"
 #include "geometry.h"
 #include "time_defines.h"
-
-int qei_position_1();
-int qei_position_2();
+#include "telem_interface.h"
 
 class Kinematics : public PeriodicTask {
  public:
@@ -34,8 +32,9 @@ class Kinematics : public PeriodicTask {
     virtual float angular_distance() { return m_angular_distance; };
     virtual float linear_speed() { return m_linear_speed; };
     virtual void set_angular_distance(float angular_distance) { m_angular_distance = angular_distance; };
-
+	void set_telem(TelemInterface*);
  protected:
+	TelemInterface* telem;
     float m_radius_left, m_radius_right;
     float m_wheel_factor_left, m_wheel_factor_right;
     float m_wheelbase;

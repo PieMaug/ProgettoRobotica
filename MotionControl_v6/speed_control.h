@@ -9,6 +9,7 @@
 #include "pid.h"
 #include "periodic_task.h"
 #include "kinematics.h"
+#include "Motor.h"
 //#include "pwm.h"
 #define MAX_PWM 100
 
@@ -17,6 +18,7 @@ void set_pwm(int,int);
 class SpeedControlTask : public PeriodicTask {
  public:
     SpeedControlTask(Kinematics & kin);
+	~SpeedControlTask();
     virtual void run();
     virtual void off(bool stop_pwm = true);
     virtual void set_params(float kp, float ki, float kd);
@@ -32,9 +34,9 @@ class SpeedControlTask : public PeriodicTask {
     //aggiunto da Orlando e Ciccotta
     virtual float get_target_left(){return m_target_left;};
     virtual float get_target_right(){return m_target_right;};
-    //
 
  protected:
+	Motor* motor;
     Kinematics & m_kinematics;
     int m_pwm_left, m_pwm_right;
     float m_target_left, m_target_right;

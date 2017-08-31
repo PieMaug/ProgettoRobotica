@@ -60,6 +60,6 @@ class Line {
 };
 
 float normalize_angle(float a);
-float hypot(float a, float b);
+float hypote(float a, float b);
 
 #endif
