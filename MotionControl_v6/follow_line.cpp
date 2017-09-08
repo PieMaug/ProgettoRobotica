@@ -8,14 +8,14 @@
 FollowLine::FollowLine(Kinematics & kinem, SpeedControlTask & speed_ctrl,
                        float linear_accel, float linear_vmax, float linear_decel, float linear_vmin)
       : PositionControl(kinem, speed_ctrl),
-	kd(1.0),
-	kh(75.0),
-	ks(100.0),
+	kd(1),
+	kh(75),
+	ks(100),
 	m_accel(linear_accel),
 	m_vmax(linear_vmax),
 	m_decel(linear_decel),
 	m_next_speed(0),
-	m_tolerance(30),
+	m_tolerance(0.5),
 	m_target_reached(false),
 	m_two_step(false)
 {
@@ -60,6 +60,8 @@ void FollowLine::run()
     if (m_target_reached) return;
 
     if ( (fabs( m_target.x() - m_kinematics.pose().x() ) < m_tolerance) && (fabs( m_target.y() - m_kinematics.pose().y() ) < m_tolerance) ) {
+	std::cout << "YEP " << m_target.x() - m_kinematics.pose().x() << " " 
+				<< m_target.y() - m_kinematics.pose().y() << " " <<  m_tolerance << "\n";
 	m_speed_control.set_targets(0, 0);
 	m_target_reached = true;
 	return;

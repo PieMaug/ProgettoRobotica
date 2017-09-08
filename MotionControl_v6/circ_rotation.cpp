@@ -73,6 +73,7 @@ void CircularRotation::run()
         
     //Distanza da raggiungere minore della soglia
     if (distance <= m_angular_target_range) {
+		std::cout << "YEP\n";
         m_speed_control.set_targets(0, 0); //Ferma il robot
         m_target_reached = true;
         return;

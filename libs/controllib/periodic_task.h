@@ -16,6 +16,7 @@ class PeriodicTask {
     virtual void off() { m_on = false; };
     virtual bool on_status() { return m_on; };
     virtual void set_period(int v) { m_period = v; };
+	const char* get_name(){ return m_name;}
 
  private:
     void execute();

@@ -11,7 +11,7 @@ telem_test:
 	g++ $(CXXFLAGS) $(CXXLIBS) -o $@ $@.cpp telem_interface.cpp EncoderMsg.pb.cc $(LIBS)
 
 
-motors_test:
+motors_test: motors_test.cpp
 	g++ $(CXXFLAGS) $(CXXLIBS) -o $@ $@.cpp control_interface.cpp MotorsCommand.pb.cc $(LIBS)
 
 

@@ -42,7 +42,7 @@ PeriodicTask::PeriodicTask(const char * name, int period, float time_unit, int j
 void PeriodicTask::execute()
 {
     if (!m_on) return;
-
+    //printf("Task name: %s\n",m_name);
     if (m_ticks == m_jitter)
         run();
     ++m_ticks;
@@ -53,7 +53,7 @@ void run_all_tasks()
 {
     PeriodicTask * p = task_list;
     while (p != NULL) {
-        p->execute();
+		p->execute();
         p = p->m_task_next;
     }
 }

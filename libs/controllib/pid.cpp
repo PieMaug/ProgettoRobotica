@@ -3,6 +3,7 @@
  */
 
 #include "pid.h"
+#include <iostream>
 
 Pid::Pid(float kp, float ki, float kd, float kff, float dt, float saturation)
     : m_Kp(kp), m_Ki(ki), m_Kd(kd), m_Kff(kff), m_dt(dt), m_saturation(saturation)
@@ -21,7 +22,11 @@ Pid::Pid()
 
 Pid::~Pid()
 {
-    delete m_derivative_low_pass;
+	if(m_derivative_low_pass != 0)
+    	delete m_derivative_low_pass;
+	else
+		std::cout << "this is weird\n";
+	
 }
 
 

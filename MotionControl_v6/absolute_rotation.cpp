@@ -59,7 +59,8 @@ void AbsoluteRotation::run()
         s = 1;
 
     //controllo target_reached raggiunto
-    if(distance <= m_angular_range){		
+    if(distance <= m_angular_range){
+		std::cout << "YEP\n";		
         m_speed_control.set_targets(0, 0);
         m_target_reached = true;
         return;

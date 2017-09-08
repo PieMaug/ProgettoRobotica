@@ -94,7 +94,7 @@ void GoTo_Point::run()
         m_direction = -m_direction;
     }
 
-    if (fabs(m_rho) <= 30) //da stabilire il threshold
+    if (fabs(m_rho) <= 0.5) //da stabilire il threshold
     {
         m_speed_control.set_targets(0, 0);//Fermo il robot
         m_target_reached = true;

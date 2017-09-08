@@ -5,6 +5,7 @@
 #include <sys/shm.h>
 #include <sys/sem.h>
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <signal.h>
 #include <gazebo/common/common.hh>
 #include "control_interface.h"

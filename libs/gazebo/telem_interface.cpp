@@ -3,6 +3,8 @@
 #include "telem_interface.h"
 
 #define RESOLUTION 4000 // ticks per revolution
+#define UPPER 10000
+#define LOWER 0.000001
 
 TelemInterface::TelemInterface()
 {
@@ -34,10 +36,14 @@ int TelemInterface::get_right_tick(){
 }
 
 float TelemInterface::get_left_vel(){
+	if(m_left_velocity > 0 && ( m_left_velocity < LOWER | m_left_velocity > UPPER) ) return 0;
+	if(m_left_velocity < 0 && ( m_left_velocity < -UPPER | m_left_velocity > -LOWER) ) return 0;
 	return m_left_velocity;
 }
 
 float TelemInterface::get_right_vel(){
+	if(m_right_velocity > 0 && ( m_right_velocity < LOWER | m_right_velocity > UPPER) ) return 0;
+	if(m_right_velocity < 0 && ( m_right_velocity < -UPPER | m_right_velocity > -LOWER) ) return 0;
 	return m_right_velocity;
 }
 
@@ -70,6 +76,13 @@ void TelemInterface::telem_callback(const ConstEncoderMsgPtr& msg)
   m_ts = msg->timestamp();
   m_left_angle = msg->left_angle();
   m_right_angle = msg->right_angle();
+#if ISRADIANT
+  m_left_angle = m_right_angle - ((int)(m_right_angle/(2 * M_PI)))* (2 * M_PI);
+  m_right_angle = m_right_angle - ((int)(m_right_angle/(2 * M_PI)))* (2 * M_PI);
+#else
+  m_left_angle = m_right_angle - ((int)(m_right_angle/360))*360;
+  m_right_angle = m_right_angle - ((int)(m_right_angle/360))*360;
+#endif
   m_left_ticks = m_left_angle * RESOLUTION / (2 * M_PI);
   m_right_ticks = m_right_angle * RESOLUTION / (2 * M_PI);
   m_left_velocity = msg->left_velocity();

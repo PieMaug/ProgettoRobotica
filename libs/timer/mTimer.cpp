@@ -1,9 +1,7 @@
 #include "mTimer.h"
 
-using namespace std::chrono;
-
 mTimer::mTimer(int time){
-	ti = false;
+	go = ti = false;
 	setTime(time);
 }
 
@@ -18,12 +16,14 @@ int mTimer::getTime(){
 
 void mTimer::start(){
 	ti = false;
+	go = true;
 	int t = time;
 	pthread_create(&timer_thread,NULL,timer_func,this);
 }
 
 void mTimer::stop(){
-	pthread_kill(timer_thread,9);
+	go = false;
+	pthread_join(timer_thread,NULL);
 }
 
 void mTimer::set(){
@@ -32,6 +32,7 @@ void mTimer::set(){
 
 void mTimer::reset(){
 	ti = false;
+	init = actual;
 }
 
 bool mTimer::getInterrupt(){
@@ -40,14 +41,14 @@ bool mTimer::getInterrupt(){
 
 void * timer_func(void* arg){
 	mTimer* timer = (mTimer*)arg;
-	time_point<high_resolution_clock> start, actual;
-	start = high_resolution_clock::now();
-	while(1){
-		actual = high_resolution_clock::now();
-		duration<double>diff = actual - start;
+	timer->set_init(high_resolution_clock::now());
+	while(timer->continuing()){
+		timer->set_actual(high_resolution_clock::now());
+		duration<double>diff = timer->get_actual() - timer->get_init();
 		if( 1000 * diff.count() >= timer->getTime()){
             timer->set();
-			start = actual;
+			timer->set_init(timer->get_actual());
 		}
 	}
+	return NULL;
 }

@@ -7,15 +7,16 @@
 
 //#include "timers.h"
 
-#define TIME_UNIT          5 // milliseconds (see timers.h)
+#define TIME_UNIT			5 // milliseconds (see timers.h)
+#define ONE_SEC				1000/TIME_UNIT //one second
 
 // tasks at 5ms
 #define KINEMATICS_PERIOD    1
 #define KINEMATICS_JITTER    0
 
 // tasks at 10ms
-#define SPEED_PERIOD         2
-#define SPEED_JITTER         1
+#define SPEED_PERIOD         	2
+#define SPEED_JITTER         	1
 
 // tasks at 40ms
 #define SPEED_SENDER_PERIOD      8

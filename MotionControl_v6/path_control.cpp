@@ -46,6 +46,7 @@ void PathControl::run()
 						setCommand(operation[m_executionIndex].typeOfCommand);
 					else
 					{
+						std::cout << "CI colpa reset\n";
 						reset(); //ho finito i comandi
 					}
 				}

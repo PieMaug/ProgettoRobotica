@@ -18,7 +18,7 @@ SpeedControlTask::SpeedControlTask(Kinematics & kin)
       m_target_left(0),
       m_target_right(0)
 {
-	motor = new Motor();
+	motor = new Motor;
 	motor->start();
     m_left_pid.init(0.0, 0.0, 0.0, 0.0, m_real_time_period, MAX_PWM);
     m_right_pid.init(0.0, 0.0, 0.0, 0.0, m_real_time_period, MAX_PWM);
@@ -48,16 +48,19 @@ void SpeedControlTask::off(bool stop_pwm)
     }
 }
 
+#include <fstream>
+
+std::ofstream foutt("pid.txt");
 
 void SpeedControlTask::run()
 {
-
     m_pwm_left = m_left_pid.evaluate(m_target_left, m_kinematics.speed_left());
     m_pwm_right = m_right_pid.evaluate(m_target_right, m_kinematics.speed_right());
 #if 0
     set_pwm(m_pwm_left, m_pwm_right);
 #else
-	motor->set_force(1,1);
+	foutt << m_pwm_left << " " << m_pwm_right << std::endl;
+	motor->set_force(m_pwm_left,m_pwm_right);
 #endif
 }
 

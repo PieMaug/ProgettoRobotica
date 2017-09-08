@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __TELEM_INTERFACE
+#define __TELEM_INTERFACE
 
 #include <string>
 
@@ -6,6 +7,8 @@
 #include <gazebo/transport/transport.hh>
 
 #include "EncoderMsg.pb.h"
+
+#define ISRADIANT	1
 
 using namespace gazebo;
 
@@ -46,3 +49,6 @@ class TelemInterface {
     // Function to call when a new message arrives on topic.
     void telem_callback(const ConstEncoderMsgPtr& msg);
 };
+
+
+#endif
